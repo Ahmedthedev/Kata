@@ -1,38 +1,35 @@
 package com.example;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.util.List;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+import org.junit.jupiter.api.Test;
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+import com.example.domain.Mower;
+import com.example.parser.InputParser;
+import com.example.parser.ParsedInput;
+import com.example.service.MowerSimulation;
+import static org.assertj.core.api.Assertions.*;
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+public class AppTest {
+
+    @Test
+    void shouldRunSimulationEndToEnd() {
+        // given
+        String input = """
+            5 5
+            1 2 N
+            GAGAGAGAA
+            3 3 E
+            AADAADADDA
+            """;
+
+        // when
+        ParsedInput parsed = InputParser.parse(input);
+        List<Mower> result = MowerSimulation.run(parsed);
+
+        // then
+        assertThat(result).hasSize(2);
+        assertThat(result.get(0).toString()).isEqualTo("1 3 N");
+        assertThat(result.get(1).toString()).isEqualTo("5 1 E");
     }
 }
