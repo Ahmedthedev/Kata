@@ -14,6 +14,11 @@ package com.example.parser;
  */
 
 class InputParser {
+
+    public static ParsedInput parse(String input) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'parse'");
+    }
  
     
  }
