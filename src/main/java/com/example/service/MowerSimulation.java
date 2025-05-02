@@ -9,7 +9,18 @@
  */
 
  package com.example.service;
-class MowerController {
+
+import java.util.List;
+
+import com.example.domain.Mower;
+import com.example.parser.ParsedInput;
+
+public class MowerSimulation {
+
+    public static List<Mower> run(ParsedInput input) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'run'");
+    }
  
     
 }
