@@ -1,3 +1,5 @@
+package com.example.parser;
+ 
 /**
  * Responsable de l'analyse du fichier d'entrée.
  * 
@@ -10,3 +12,8 @@
  * Ce parser simplifie la séparation entre données brutes (texte) et modèle
  * objet.
  */
+
+class InputParser {
+ 
+    
+ }

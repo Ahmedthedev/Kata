@@ -7,3 +7,8 @@
  * Design pattern utilisé : Strategy possible pour modulariser les actions
  * (Gauche, Droite, Avancer).
  */
+package com.example.service;
+class MowerController {
+ 
+    
+}
