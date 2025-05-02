@@ -8,7 +8,18 @@
  * (Gauche, Droite, Avancer).
  */
 package com.example.service;
+
+import com.example.domain.Lawn;
+import com.example.domain.Mower;
+
 class MowerController {
  
-    
+    private final Mower mower;
+    private final Lawn lawn;
+
+    public MowerController(Mower mower, Lawn lawn) {
+        this.mower = mower;
+        this.lawn = lawn;
+    }
+
 }
