@@ -7,3 +7,9 @@
  * Elle constitue le cœur de l'application côté service, en séparant
  * complètement la logique métier du parsing et de l'affichage.
  */
+
+ package com.example.service;
+class MowerController {
+ 
+    
+}
